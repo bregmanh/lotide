@@ -9,6 +9,7 @@ const assertEqual = function (actual, expected) {
 };
 
 const countLetters = function (str) {
+  str = str.replace(/\s/g, '');
   let result = {};
   for (letter of str) {
     if (result[letter]) {
@@ -21,7 +22,6 @@ const countLetters = function (str) {
 }
 
 //TEST CODE
-
 const result1 = countLetters("lighthouse in the house");
 
 assertEqual(result1["l"], 1);
