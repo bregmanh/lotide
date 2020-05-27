@@ -42,6 +42,7 @@ const firstNames = [
   "Joe"
 ];
 
+//TEST CODE
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
 
 assertEqual(result1["Jason"], 1);
