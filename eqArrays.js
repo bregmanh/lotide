@@ -4,8 +4,15 @@ const eqArrays = function (arr1, arr2) {
     return false;
   } else {
     for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
+      if (Array.isArray(arr1[i])) {
+        let result = eqArrays(arr1[i], arr2[i]);
+        if (result === false) {
+          return false;
+        }
+      } else {
+        if (arr1[i] !== arr2[i]) {
+          return false;
+        }
       }
     } return true;
   }
@@ -22,10 +29,7 @@ const assertEqual = function (actual, expected) {
 };
 
 //TEST CODE
-eqArrays([1, 2, 3], [1, 2, 3]) // => returns true
-eqArrays([1, 2, 3], [3, 2, 1]) // => returns false
-
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => returns true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => returns false
-
+assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true) // => returns true
+assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false) // => returns false
+assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false) // => returns false
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
