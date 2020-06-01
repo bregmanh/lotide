@@ -21,9 +21,10 @@ const countLetters = function (str) {
   return result;
 }
 
-//TEST CODE
-const result1 = countLetters("lighthouse in the house");
+module.exports = countLetters;
+// //TEST CODE
+// const result1 = countLetters("lighthouse in the house");
 
-assertEqual(result1["l"], 1);
-assertEqual(result1["o"], 2);
-assertEqual(result1["Fang"], undefined);
+// assertEqual(result1["l"], 1);
+// assertEqual(result1["o"], 2);
+// assertEqual(result1["Fang"], undefined);

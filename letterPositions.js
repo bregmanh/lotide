@@ -37,10 +37,12 @@ const letterPositions = function (sentence) {
   return results;
 };
 
-//TEST CODE
-const result1 = letterPositions("lighthouse in the house");
+module.exports = letterPositions;
 
-assertArrayEqual(result1["l"], [0]); // => should PASS
-assertArrayEqual(result1["u"], [7, 20]);
+// //TEST CODE
+// const result1 = letterPositions("lighthouse in the house");
+
+// assertArrayEqual(result1["l"], [0]); // => should PASS
+// assertArrayEqual(result1["u"], [7, 20]);
 
 
