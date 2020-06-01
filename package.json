@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@hbregman/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lotide, makes working with arrays and obkects easier. Inspired by [Lodash](https://lodash.com) library.",
   "main": "assertArrayEqual.js",
   "directories": {
     "test": "test"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/bregmanh/lotide.git"
   },
-  "author": "",
+  "author": "Hannah Bregman <hannbreg@aim.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bregmanh/lotide/issues"
