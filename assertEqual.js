@@ -1,4 +1,4 @@
-// FUNCTION IMPLEMENTATION
+// Function tests if two numbers or strings are equal to each other
 
 const assertEqual = function (actual, expected) {
 
@@ -10,6 +10,6 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 3);
+module.exports = assertEqual;
+
+
