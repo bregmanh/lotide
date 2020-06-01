@@ -1,4 +1,5 @@
-// FUNCTION IMPLEMENTATION
+// Function checks if two arrays are equal
+
 const eqArrays = function (arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -18,18 +19,7 @@ const eqArrays = function (arr1, arr2) {
   }
 }
 
-const assertEqual = function (actual, expected) {
+module.exports = eqArrays;
 
-  if (actual === expected) {
-    return console.log(`😀 Assertion Passed: "${actual}" === "${expected}"`);
-  } else {
-    return console.log(`🔥 Assertion Failed: "${actual}" !== "${expected}"`);
 
-  }
-};
 
-//TEST CODE
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true) // => returns true
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false) // => returns false
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false) // => returns false
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
